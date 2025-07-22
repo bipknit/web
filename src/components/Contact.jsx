@@ -67,8 +67,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+        "service_wj1ur8h",
+        "template_ufkiu2u",
         {
           from_name: form.name,
           to_name: "bipknit",
@@ -76,7 +76,7 @@ const Contact = () => {
           to_email: "bipknit@gmail.com",
           message: form.message,
         },
-        "p-gXzzyvEhPaJ0XA-"
+        "1_PxcwxmX-fbFri07"
       )
       .then(
         () => {
