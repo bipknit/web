@@ -4,10 +4,24 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
 import TextType from "./TextType";  // Importing the .tsx file
+import DotGrid from './DotGrid';
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+            <DotGrid
+                dotSize={10}
+                gap={15}
+                baseColor="#5227FF"
+                activeColor="#5227FF"
+                proximity={120}
+                shockRadius={250}
+                shockStrength={5}
+                resistance={750}
+                returnDuration={1.5}
+            />
+        </div>
       <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -30,7 +44,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
