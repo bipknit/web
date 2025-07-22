@@ -42,7 +42,7 @@ const Navbar = () => {
                 isSecondary ? 'secondary' : 'white'
             } hover:text-white text-[20px] font-medium cursor-pointer`}
         >
-          <button onClick={toggleResume}>Resume</button>
+            {/*   <button onClick={toggleResume}>Resume</button>*/}
         </li>
       </ul>
   );
@@ -61,7 +61,7 @@ const Navbar = () => {
                   window.scrollTo(0, 0);
                 }}
             >
-              <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+              <img src={logo} alt="logo" className="w-16 h-16 object-contain" />
               <p className="text-white text-[20px] font-bold cursor-pointer flex">
                 bipknit&nbsp;
                 <span className="sm:block hidden"></span>
