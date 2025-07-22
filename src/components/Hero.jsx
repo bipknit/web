@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import Typewriter from "typewriter-effect";
+import TextType from "./TextType";  // Importing the .tsx file
 
 const Hero = () => {
   return (
@@ -18,17 +19,13 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">bipknit</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I do
-            <Typewriter
-              options={{
-                strings: ["Roblox development", "fun", "your mother"],
-                autoStart: true,
-                loop: true,
-                loopCount: Infinity,
-                deleteSpeed: "natural",
-                pauseFor: 1000,
-              }}
-            />
+              <TextType
+                  text={["Text typing effect", "for your websites", "Happy coding!"]}
+                  typingSpeed={75}
+                  pauseDuration={1500}
+                  showCursor={true}
+                  cursorCharacter="|"
+              />
           </p>
         </div>
       </div>
