@@ -62,10 +62,6 @@ const Navbar = () => {
                 }}
             >
               <img src={logo} alt="logo" className="w-16 h-16 object-contain" />
-              <p className="text-white text-[20px] font-bold cursor-pointer flex">
-                bipknit&nbsp;
-                <span className="sm:block hidden"></span>
-              </p>
             </Link>
             {renderNavLinks(false)}
             <div className="sm:hidden flex flex-1 justify-end items-center">
