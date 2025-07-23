@@ -5,8 +5,9 @@ import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
-import ScrambledText from './ScrambledText';
 import ScrollReveal from './ScrollReveal';
+
+
 
 
 
@@ -38,27 +39,19 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
-          <ScrambledText
-              className="scrambled-text-demo"
-              radius={100}
-              duration={1.2}
-              speed={0.5}
-              scrambleChars={".:"}
-          >
-              Im a computer science engineer undergraduate.
-          </ScrambledText>
 
-          <ScrollReveal
-              baseOpacity={0}
-              enableBlur={true}
-              baseRotation={5}
-              blurStrength={10}
-          >
-              When does a man die? When he is hit by a bullet? No! When he suffers a disease?
-              No! When he ate a soup made out of a poisonous mushroom?
-              No! A man dies when he is forgotten!
-          </ScrollReveal>
       </motion.div>
+
+        <ScrollReveal
+            baseOpacity={0.5}
+            enableBlur={true}
+            baseRotation={5}
+            blurStrength={5}
+        >
+            Im a computer science engineer undergraduate.
+            I study at Debrecen University.
+            Grades can be checked in the attached pdf which is accessible on the navbar.
+        </ScrollReveal>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

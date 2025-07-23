@@ -5,15 +5,8 @@ import TextType from "./TextType";  // Importing the .tsx file
 import DotGrid from './canvas/DotGrid.jsx';
 import {logo} from "../assets/index.js";
 import CurvedLoop from './CurvedLoop';
-import { useRef } from 'react';
-import VariableProximity from './VariableProximity';
-
-const containerRef = useRef(null);
-
-
-// Note:
-// Make sure the font you're using supports all the variable properties.
-// React Bits does not take responsibility for the fonts used
+import CountUp from './CountUp';
+import Lenis from 'lenis'
 
 
 
@@ -29,8 +22,8 @@ const Hero = () => {
                 proximity={120}
                 shockRadius={250}
                 shockStrength={5}
-                resistance={750}
-                returnDuration={1.5}
+                resistance={1000}
+                returnDuration={2}
             />
         </div>
       <div className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}>
@@ -41,13 +34,22 @@ const Hero = () => {
 
         <div>
 
-            <span className={"text-7xl font-semibold text-white"}>Hi I'm </span> <span className="font-bold text-7xl text-[#915EFF]">bipknit</span>
+            <span className={"text-7xl font-semibold text-white"}>Hi I'm </span> <span className="font-bold text-7xl text-[#915EFF] pb-52 mb-20">bipknit</span>
 
             <h1 className={'${styles.heroHeadText} text-white flex items-center text-6xl'}>
                 {/*<img src={logo} alt="logo" className="w-128 h-28 object-contain ml-2" />*/}
             </h1>
 
-
+            <p className={'mt-4'}> <span className={'pink-text-gradient'}>Follower count: </span>
+            <CountUp
+                from={0}
+                to={30000}
+                separator=","
+                direction="up"
+                duration={5}
+                className="count-up-text"
+            />
+            </p>
             <p className={`${styles.heroSubText} mt-2 text-transparent bg-clip-text orange-text-gradient`}>
                 <TextType
                     text={["Happy coding!", "Always smile!"]}
@@ -72,26 +74,8 @@ const Hero = () => {
                 interactive={true}
                 className="custom-text-style"
             />
-
-
-            <div
-                ref={containerRef}
-                style={{position: 'relative'}}
-            >
-                <VariableProximity
-                    label={'Hover me! And then star React Bits on GitHub, or else...'}
-                    className={'variable-proximity-demo'}
-                    fromFontVariationSettings="'wght' 400, 'opsz' 9"
-                    toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                    containerRef={containerRef}
-                    radius={100}
-                    falloff='linear'
-                />
-            </div>
-
         </div>
       </div>
-
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
