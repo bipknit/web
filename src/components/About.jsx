@@ -5,6 +5,10 @@ import { services } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
+import ScrambledText from './ScrambledText';
+import ScrollReveal from './ScrollReveal';
+
+
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -34,14 +38,27 @@ const About = () => {
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+          <ScrambledText
+              className="scrambled-text-demo"
+              radius={100}
+              duration={1.2}
+              speed={0.5}
+              scrambleChars={".:"}
+          >
+              Im a computer science engineer undergraduate.
+          </ScrambledText>
 
-      <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I am a Computer Science engineer student at Debrecen University.
-      </motion.p>
+          <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+          >
+              When does a man die? When he is hit by a bullet? No! When he suffers a disease?
+              No! When he ate a soup made out of a poisonous mushroom?
+              No! A man dies when he is forgotten!
+          </ScrollReveal>
+      </motion.div>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

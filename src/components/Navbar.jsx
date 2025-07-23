@@ -63,7 +63,6 @@ const Navbar = () => {
                   window.scrollTo(0, 0);
                 }}
             >
-              <img src={logo} alt="logo" className="w-16 h-16 object-contain" />
             </Link>
             {renderNavLinks(false)}
             <div className="sm:hidden flex flex-1 justify-end items-center">
