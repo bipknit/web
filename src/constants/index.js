@@ -39,7 +39,7 @@ export const navLinks = [
 
 export const services = [
   { title: "C", icon: c },
-  { title: "luau"},
+  { title: "Matlab", icon: mathwork},
 ];
 
 export const technologies = [

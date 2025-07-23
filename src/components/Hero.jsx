@@ -53,7 +53,7 @@ const Hero = () => {
             <p className={`${styles.heroSubText} mt-2 text-transparent bg-clip-text orange-text-gradient`}>
                 <TextType
                     text={["Happy coding!", "Always smile!"]}
-                    typingSpeed={75}
+                    typingSpeed={40}
                     pauseDuration={1500}
                     showCursor={true}
                     cursorCharacter="|"
@@ -66,14 +66,6 @@ const Hero = () => {
                     }}
                 />
             </p>
-            <CurvedLoop
-                marqueeText="At the end what matters is what you have done."
-                speed={4}
-                curveAmount={200}
-                direction="right"
-                interactive={true}
-                className="custom-text-style"
-            />
         </div>
       </div>
 
